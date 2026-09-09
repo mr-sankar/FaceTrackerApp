@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutFloatingRoot"
+    android:layout_width="160dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_floating_widget"
+    android:elevation="8dp"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- Header / Drag Bar -->
+    <LinearLayout
+        android:id="@+id/layoutDragBar"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_camera"
+            android:contentDescription="@string/camera_icon" />
+
+        <TextView
+            android:id="@+id/tvWidgetTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="Tracker"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnToggleSize"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_eye"
+            android:contentDescription="@string/toggle_view" />
+
+        <ImageView
+            android:id="@+id/btnCloseWidget"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_close"
+            android:contentDescription="@string/close_widget" />
+    </LinearLayout>
+
+    <!-- Camera Preview (Compact) -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewViewFloating"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="4dp" />
+
+    <!-- Live Counters HUD -->
+    <LinearLayout
+        android:id="@+id/layoutCounters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- Blinks -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BLINKS"
+                android:textColor="#79C0FF"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/tvFloatingBlinks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#58A6FF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="24dp"
+            android:background="#30363D" />
+
+        <!-- Smiles -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SMILES"
+                android:textColor="#FFA198"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/tvFloatingSmiles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#FF7B72"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

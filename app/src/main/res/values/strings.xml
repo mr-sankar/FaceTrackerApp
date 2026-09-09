@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Face Details Tracker</string>
+    <string name="start_background">Start Background Tracking</string>
+    <string name="stop_background">Stop Background Tracking</string>
+    <string name="reset_counts">Reset Counts</string>
+    <string name="permission_required">Permissions Required</string>
+    <string name="camera_icon">Camera</string>
+    <string name="toggle_view">Toggle View</string>
+    <string name="close_widget">Close Widget</string>
+    <string name="notification_channel_name">Face Tracker Background Service</string>
+    <string name="notification_channel_desc">Keeps the face details tracker running in the background.</string>
+</resources>
